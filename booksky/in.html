@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booksky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>BoundTales</h1>
+    </div>
+    <div class="container">
+        <!-- Book container -->
+        <div class="book-container">
+            <h2>The Alchemist</h2>
+            <h5>Paulo Coelho</h5>
+            <p>A philosophical tale of a shepherd, Santiago, on his journey to discover his Personal Legend and the treasures of life.</p>
+            <button onclick="deletebook(event)">Delete</button>
+        </div>
+    </div>
+
+    <!-- Popup overlay -->
+    <div class="popup-overlay" style="display: none;"></div>
+    <div class="popup-box" style="display: none;">
+        <h2>ADD TALES</h2>
+        <form>
+            <input type="text" placeholder="Book Title" id="book-title-input">
+            <input type="text" placeholder="Book Author" id="book-author-input">
+            <textarea placeholder="Short Description" id="book-description-input"></textarea>
+            <button type="submit" id="add-book">ADD</button>
+            <button type="button" id="cancel-popup">CANCEL</button>
+        </form>
+    </div>
+
+    <!-- Button to trigger popup -->
+    <button class="add-button" id="add-popup-button">+</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
